@@ -18,7 +18,23 @@ wc185:: db
 
 	ds $aa
 
-wc230:: ds $80
+wSavedata::
+wSavedataSlot1::  savedata_struct wSavedataSlot1
+wSavedataSlot2::  savedata_struct wSavedataSlot2
+wSavedataSlot3::  savedata_struct wSavedataSlot3
+wSavedataSlot4::  savedata_struct wSavedataSlot4
+wSavedataSlot5::  savedata_struct wSavedataSlot5
+wSavedataSlot6::  savedata_struct wSavedataSlot6
+wSavedataSlot7::  savedata_struct wSavedataSlot7
+wSavedataSlot8::  savedata_struct wSavedataSlot8
+wSavedataSlot9::  savedata_struct wSavedataSlot9
+wSavedataSlot10:: savedata_struct wSavedataSlot10
+wSavedataSlot11:: savedata_struct wSavedataSlot11
+wSavedataSlot12:: savedata_struct wSavedataSlot12
+wSavedataSlot13:: savedata_struct wSavedataSlot13
+wSavedataSlot14:: savedata_struct wSavedataSlot14
+wSavedataSlot15:: savedata_struct wSavedataSlot15
+wSavedataSlot16:: savedata_struct wSavedataSlot16
 
 	ds $150
 

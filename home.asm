@@ -9,9 +9,9 @@ _Start::
 	dr $0150, $0240
 
 Func_0240:
-	ld e, $80
+	ld e, 16 * 8 ; 16 slots
 	ld hl, unkData_2164
-	ld bc, wc230
+	ld bc, wSavedata
 .copy
 	ld a, [hli]
 	ld [bc], a
