@@ -27,11 +27,8 @@ RGBLINK ?= $(RGBDS)rgblink
 
 all: pockettsuu.gb
 
-clean: tidy
-	find . \( -iname '*.1bpp' -o -iname '*.2bpp' \) -delete
-
-tidy:
-	rm -f $(rom) $(rom_obj) $(rom:.gb=.map) $(rom:.gb=.sym) rgbdscheck.o
+clean:
+	rm -f $(rom) $(rom_obj) $(rom:.gb=.map) $(rom:.gb=.sym)
 	$(MAKE) clean -C tools/
 
 compare: $(rom)
@@ -42,11 +39,8 @@ tools:
 
 RGBASMFLAGS = -L -Weverything
 
-rgbdscheck.o: rgbdscheck.asm
-	$(RGBASM) -o $@ $<
-
 define DEP
-$1: $2 $$(shell tools/scan_includes $2) | rgbdscheck.o
+$1: $2 $$(shell tools/scan_includes $2)
 	$$(RGBASM) $$(RGBASMFLAGS) -o $$@ $$<
 endef
 
@@ -60,7 +54,7 @@ $(foreach obj, $(rom_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 
 endif
 
-fix_opt = -vs -r 0 -n 0 -m 1 -l 0x33 -k BJ -t "POCKET PUYOPUYO2"
+fix_opt = -vs -r 0 -n 0 -m 1 -l 0x33 -k BJ -p 0 -t "POCKET PUYOPUYO2"
 
 pockettsuu.gb: $(rom_obj) layout.link baserom.gb
 	$(RGBLINK) -n pockettsuu.sym -m pockettsuu.map -l layout.link -O baserom.gb -o $@ $(filter %.o,$^)

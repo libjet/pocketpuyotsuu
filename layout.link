@@ -1,8 +1,34 @@
 ROM0
 	org $0000
-	"rst_00"
-	org $127d
-	"Graphics"
+	"rst0"
+	org $0020
+	"rst20"
+	org $0038
+	"rst38"
+	org $0040
+	"vblank"
+	org $0048
+	"lcd"
+	org $0050
+	"timer"
+	org $0058
+	"serial"
+	org $0060
+	"joypad"
+	org $0061
+	"Header Code"
+	org $0100
+	"Header"
+
+	org $0150
+	"Home"
+
+WRAM0
+	"WRAM 0"
+
+WRAMX 1
+	"WRAM 1"
+
 HRAM
 	org $ff80
 	"HRAM"

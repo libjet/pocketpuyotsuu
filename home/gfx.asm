@@ -1,5 +1,3 @@
-SECTION "Graphics", ROM0
-
 Decompress:
 .loop
 	ld a, [bc]
