@@ -7,7 +7,7 @@ SECTION "rst0", ROM0
 	ldh a, [hFFF0]
 	ldh [hFF90], a
 	ld [$2000], a
-	call unk_09c7
+	call Func_09c7
 	pop af
 ; SECTION "rst10", ROM0[$0010]
 	ldh [hFF90], a
@@ -64,7 +64,7 @@ Timer:
 	pop af
 	reti
 
-unk_00ce:
+Func_00ce:
 	dr $00ce, $0100
 
 

@@ -1,13 +1,7 @@
 SECTION "HRAM", HRAM
 
-hFF80:: db
-hFF81:: db
-hFF82:: db
-hFF83:: db
-hFF84:: db
-hFF85:: db
-hFF86:: db
-hFF87:: db
+hTransferVirtualOAM:: ds 8
+
 hFF88:: db
 hFF89:: db
 hFF8A:: db

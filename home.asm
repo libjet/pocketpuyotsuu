@@ -6,15 +6,42 @@ INCLUDE "home/header.asm"
 SECTION "Home", ROM0
 
 _Start::
-	dr $0150, $09c7
+	dr $0150, $0240
 
-unk_09c7:
+Func_0240:
+	ld e, $80
+	ld hl, unkData_2164
+	ld bc, wc230
+.copy
+	ld a, [hli]
+	ld [bc], a
+	inc c
+	dec e
+	jr nz, .copy
+	ret
+
+Func_024f:
+	dr $024f, $02f2
+
+INCLUDE "home/joypad.asm"
+INCLUDE "home/load_push_oam.asm"
+
+Func_0354:
+	dr $0354, $09c7
+
+Func_09c7:
 	dr $09c7, $127d
 
 INCLUDE "home/gfx.asm"
 
-unk_12a4:
+Func_12a4:
 	dr $12a4, $2093
 
 VBlank:
-	dr $2093, $4000
+	dr $2093, $2164
+
+unkData_2164:
+	dr $2164, $21e4
+
+unk_21e4:
+	dr $21e4, $4000

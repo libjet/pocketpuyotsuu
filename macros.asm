@@ -1,3 +1,2 @@
-dr: MACRO
-	INCBIN "baserom.gb", \1, \2 +- \1
-ENDM
+INCLUDE "macros/const.asm"
+INCLUDE "macros/data.asm"
