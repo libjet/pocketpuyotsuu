@@ -10,7 +10,7 @@ _Start::
 
 Func_0240:
 	ld e, 16 * 8 ; 16 slots
-	ld hl, unkData_2164
+	ld hl, LeaderboardEntries
 	ld bc, wSavedata
 .copy
 	ld a, [hli]
@@ -40,8 +40,7 @@ Func_12a4:
 VBlank:
 	dr $2093, $2164
 
-unkData_2164:
-	dr $2164, $21e4
+INCLUDE "data/leaderboard.asm"
 
 unk_21e4:
 	dr $21e4, $4000

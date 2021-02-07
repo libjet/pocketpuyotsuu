@@ -53,8 +53,15 @@ x = x - 8
 endr
 ENDM
 
-dt: MACRO ; three-byte (big-endian)
-	dx 3, \1
+; dt: MACRO ; three-byte (big-endian)
+; 	dx 3, \1
+; ENDM
+
+dt: MACRO ; three-byte (little-endian)
+rept _NARG
+    db LOW(\1), HIGH(\1), ((\1) & $ff0000) >> 16
+    shift
+endr
 ENDM
 
 dd: MACRO ; four-byte (big-endian)
