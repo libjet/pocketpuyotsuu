@@ -1,5 +1,4 @@
 INCLUDE "charmap.asm"
-INCLUDE "leaderboard_charmap.asm"
 
 INCLUDE "macros.asm"
 

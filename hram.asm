@@ -2,15 +2,20 @@ SECTION "HRAM", HRAM
 
 hTransferVirtualOAM:: ds 8
 
-hFF88:: db
-hFF89:: db
+hSCX:: db
+hSCY:: db
+
 hFF8A:: db
-hFF8B:: db
-hFF8C:: db
-hFF8D:: db
+
+hBGP:: db
+hOBP0:: db
+hOBP1:: db
+
 hFF8E:: db
 hFF8F:: db
-hFF90:: db
+
+hROMBank:: db
+
 hFF91:: db
 hFF92:: db
 hFF93:: db

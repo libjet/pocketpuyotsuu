@@ -6,13 +6,33 @@ SECTION "WRAM 0", WRAM0
 
 wc010:: db
 wc011:: db
+wc012:: db
 
-	ds $5e
+	ds $3e
+
+wc051:: db
+
+	ds $10
+
+wc062:: db
+wc063:: db
+
+	ds 12
 
 wNextInputDelay:: db
 wCurrentInputDelay:: db
 
-	ds $113
+	ds $ce
+
+wc140:: db
+wc141:: db
+wc142:: db
+wc143:: db
+wc144:: db
+wc145:: db
+wc146:: db
+
+	ds $3e
 
 wc185:: db
 

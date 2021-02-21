@@ -2,16 +2,16 @@
 
 SECTION "rst0", ROM0
 	ldh [hFFF0], a
-	ldh a, [hFF90]
+	ldh a, [hROMBank]
 	push af
 	ldh a, [hFFF0]
-	ldh [hFF90], a
-	ld [$2000], a
+	ldh [hROMBank], a
+	ld [MBC1RomBank], a
 	call Func_09c7
 	pop af
 ; SECTION "rst10", ROM0[$0010]
-	ldh [hFF90], a
-	ld [$2000], a
+	ldh [hROMBank], a
+	ld [MBC1RomBank], a
 	ret
 
 SECTION "rst20", ROM0

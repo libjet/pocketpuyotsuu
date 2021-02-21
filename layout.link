@@ -23,6 +23,9 @@ ROM0
 	org $0150
 	"Home"
 
+ROMX $03
+	"bank3"
+
 WRAM0
 	"WRAM 0"
 
